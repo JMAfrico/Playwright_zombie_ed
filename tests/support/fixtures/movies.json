@@ -1,0 +1,32 @@
+[
+    {
+      "title": "O Apocalipse Zumbi",
+      "overview": "Um grupo de sobreviventes luta para sobreviver em um mundo devastado por zumbis.",
+      "company": "Terror Films",
+      "release_year": 2020
+    },
+    {
+      "title": "A Cidade dos Mortos",
+      "overview": "Uma cidade é tomada por uma horda de zumbis e os poucos sobreviventes precisam encontrar uma maneira de escapar.",
+      "company": "Horror Studios",
+      "release_year": 2018
+    },
+    {
+      "title": "Resistência Zumbi",
+      "overview": "Em um futuro pós-apocalíptico, um pequeno grupo de humanos luta contra zumbis para recuperar a civilização.",
+      "company": "Thriller Productions",
+      "release_year": 2022
+    },
+    {
+      "title": "Dia Z: A Queda",
+      "overview": "Durante um surto global de zumbis, um grupo de soldados tenta encontrar uma cura e salvar a humanidade.",
+      "company": "Action Films",
+      "release_year": 2021
+    },
+    {
+      "title": "Sobrevivência Zumbi",
+      "overview": "Um adolescente deve proteger sua irmã mais nova enquanto fogem de uma cidade infestada por zumbis.",
+      "company": "Survival Studios",
+      "release_year": 2019
+    }
+  ]
