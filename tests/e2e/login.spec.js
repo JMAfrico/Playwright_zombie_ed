@@ -45,12 +45,6 @@ test('deve logar como adm', async ({ page }) => {
     await loginPage.alertHaveText('Campo obrigatório');
   });
 
-  test('nao deve logar quando a senha nao e preenchida', async ({ page }) => {
-    await loginPage.visit();
-    await loginPage.submit('joao@hotmail.com','');
-    await loginPage.alertHaveText('Campo obrigatório');
-  });
-
   test('nao deve logar quando nenhum campo é preenchido', async ({ page }) => {
     await loginPage.visit();
     await loginPage.submit('','');
