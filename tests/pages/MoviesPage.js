@@ -13,10 +13,19 @@ export class MoviesPage{
         await expect(this.page).toHaveURL(/.*movies/);
      }
 
-     async create(title,overview,company,release_year){
+     async goForm(){
         //^ começa com, * contem, $ termina com
         await this.page.locator("a[href$='register']").click();
-        
+     }
+
+     async submit(){
+        //botao cadastrar
+        await this.page.getByRole('button', {name: 'Cadastrar'}).click();
+     }
+
+     async create(title,overview,company,release_year){
+
+        await this.page.goForm();
         //Title
         //getByLabel buscar atravez da label pai propriedade "for" 
         //e vai navegando internamente até o input e preenche (se conter o mesmo nome no input)
@@ -43,8 +52,7 @@ export class MoviesPage{
         .filter({hasText: release_year})
         .click();
 
-        //botao cadastrar
-        await this.page.getByRole('button', {name: 'Cadastrar'}).click();
+        await this.page.submit();
         
      }
 }
