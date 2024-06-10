@@ -3,32 +3,32 @@ const { test, expect } = require('../support');
 const { faker } = require('@faker-js/faker');
 
 test('Lead com email invalido', async ({ page }) => {
-  await page.landing.visit();
-  await page.landing.openLeadModal();
-  await page.landing.submitFormLead('João Marcos', 'joao_marcossilvahotmail.com');
+  await page.lead.visit();
+  await page.lead.openLeadModal();
+  await page.lead.submitFormLead('João Marcos', 'joao_marcossilvahotmail.com');
   const labelEmailIncorreto = 'Email incorreto';
   await page.alert.haveText(labelEmailIncorreto);
 
 });
 test('Lead com dado nome vazio', async ({ page }) => {
-  await page.landing.visit();
-  await page.landing.openLeadModal();
-  await page.landing.submitFormLead('', 'joao_marcossilva@hotmail.com');
+  await page.lead.visit();
+  await page.lead.openLeadModal();
+  await page.lead.submitFormLead('', 'joao_marcossilva@hotmail.com');
   const labelmsg = 'Campo obrigatório';
   await page.alert.haveText(labelmsg)
 });
 test('Lead com dado email vazio', async ({ page }) => {
-  await page.landing.visit();
-  await page.landing.openLeadModal();
-  await page.landing.submitFormLead('João Marcos','');
+  await page.lead.visit();
+  await page.lead.openLeadModal();
+  await page.lead.submitFormLead('João Marcos','');
   const labelmsg = 'Campo obrigatório';
   await page.alert.haveText(labelmsg)
 
 });
 test('Lead com dados vazios', async ({ page }) => {
-  await page.landing.visit();
-  await page.landing.openLeadModal();
-  await page.landing.submitFormLead('', '');
+  await page.lead.visit();
+  await page.lead.openLeadModal();
+  await page.lead.submitFormLead('', '');
   const labelmsg= 'Campo obrigatório';
   await page.alert.haveText([
     labelmsg,
@@ -40,9 +40,9 @@ test('Adicionar um lead com sucesso', async ({ page }) => {
   const randomName = faker.person.fullName(); 
   const randomEmail = faker.internet.email();
 
-  await page.landing.visit();
-  await page.landing.openLeadModal();
-  await page.landing.submitFormLead(randomName, randomEmail);
+  await page.lead.visit();
+  await page.lead.openLeadModal();
+  await page.lead.submitFormLead(randomName, randomEmail);
   const msg = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
   await page.toast.haveText(msg)
 });
@@ -63,9 +63,9 @@ test('Tentativa de cadastrar um lead ja cadastrado', async ({ page, request }) =
 
   await expect(newLead.ok()).toBeTruthy();
   
-  await page.landing.visit();
-  await page.landing.openLeadModal();
-  await page.landing.submitFormLead(randomName, randomEmail);
+  await page.lead.visit();
+  await page.lead.openLeadModal();
+  await page.lead.submitFormLead(randomName, randomEmail);
   const msg = 'O endereço de e-mail fornecido já está registrado em nossa fila de espera.'
   await page.toast.haveText(msg)
 });

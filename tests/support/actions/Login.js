@@ -1,9 +1,15 @@
 const {expect} = require('@playwright/test');
 
-export class LoginPage {
+export class Login {
 
      constructor(page){
         this.page = page;
+     }
+
+     async logar(email,senha){
+         this.visit();
+         this.submit(email,senha);
+         this.isLoggedIn();
      }
 
      async visit(){
@@ -20,11 +26,19 @@ export class LoginPage {
         
      }
 
-
-
      async alertHaveText(text){
       //esse é um locator css onde o $ significa que
       const alert = this.page.locator('span[class$=alert]')
       await expect(alert).toHaveText(text);
      }
+
+     async isLoggedIn(){
+      //Aguarda todo o network ser carregado pra seguir o teste
+      await this.page.waitForLoadState('networkidle');
+      //await expect(this.page).toHaveURL('http://localhost:3000/admin/movies');
+      await expect(this.page).toHaveURL(/.*movies/);
+
+      const logedUser = this.page.locator('.logged-user');
+      await expect(logedUser).toContainText('Olá,');
+   }
 }

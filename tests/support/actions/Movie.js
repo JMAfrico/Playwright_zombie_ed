@@ -1,17 +1,17 @@
 const {expect} = require('@playwright/test');
 
-export class MoviesPage{
+export class Movie{
 
     constructor(page){
         this.page = page;
     }
 
-    async isLoggedIn(){
-        //Aguarda todo o network ser carregado pra seguir o teste
-        await this.page.waitForLoadState('networkidle');
-        //await expect(this.page).toHaveURL('http://localhost:3000/admin/movies');
-        await expect(this.page).toHaveURL(/.*movies/);
-     }
+   //  async isLoggedIn(){
+   //      //Aguarda todo o network ser carregado pra seguir o teste
+   //      await this.page.waitForLoadState('networkidle');
+   //      //await expect(this.page).toHaveURL('http://localhost:3000/admin/movies');
+   //      await expect(this.page).toHaveURL(/.*movies/);
+   //   }
 
      async goForm(){
         //^ começa com, * contem, $ termina com
@@ -25,7 +25,7 @@ export class MoviesPage{
 
      async create(title,overview,company,release_year){
 
-        await this.page.goForm();
+        await this.goForm();
         //Title
         //getByLabel buscar atravez da label pai propriedade "for" 
         //e vai navegando internamente até o input e preenche (se conter o mesmo nome no input)
@@ -52,7 +52,7 @@ export class MoviesPage{
         .filter({hasText: release_year})
         .click();
 
-        await this.page.submit();
+        await this.submit();
         
      }
 }

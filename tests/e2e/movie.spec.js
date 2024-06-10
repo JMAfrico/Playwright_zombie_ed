@@ -20,19 +20,15 @@ test('deve cadastrar um novo filme', async ({ page }) => {
     const movie = data.guerra_mundial_z;
     await executeSQL(`DELETE from movies WHERE title = '${movie.title}';`)
 
-    await page.login.visit();
-    await page.login.submit('admin@zombieplus.com', 'pwd123');
-    await page.movies.isLoggedIn();
-    await page.movies.create(movie.title, movie.overview, movie.company, movie.release_year);
+    await page.login.logar('admin@zombieplus.com', 'pwd123');
+    await page.movie.create(movie.title, movie.overview, movie.company, movie.release_year);
     await page.toast.haveText('Cadastro realizado com sucesso')
 })
 
 test('nao deve permitir criar filme sem preencher campos obrigatórios', async ({page})=>{
-    await page.login.visit();
-    await page.login.submit('admin@zombieplus.com', 'pwd123');
-    await page.movies.isLoggedIn();
-    await page.movies.goForm();
-    await page.movies.submit();
+    await page.login.logar('admin@zombieplus.com', 'pwd123');
+    await page.movie.goForm();
+    await page.movie.submit();
     await page.alert.haveText([
         'Por favor, informe o título.',
         'Por favor, informe a sinopse.',
