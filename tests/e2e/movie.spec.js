@@ -17,11 +17,11 @@ test('(sem contexto)deve cadastrar um novo filme', async ({ page }) => {
 
 test('deve cadastrar um novo filme', async ({ page }) => {
 
-    const movie = data.guerra_mundial_z;
+    const movie = data.filme.guerra_mundial_z;
     await executeSQL(`DELETE from movies WHERE title = '${movie.title}';`)
 
     await page.login.logar('admin@zombieplus.com', 'pwd123');
-    await page.movie.create(movie.title, movie.overview, movie.company, movie.release_year);
+    await page.movie.create(movie);
     await page.toast.haveText('Cadastro realizado com sucesso')
 })
 

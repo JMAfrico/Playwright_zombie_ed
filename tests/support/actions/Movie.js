@@ -1,4 +1,5 @@
 const {expect} = require('@playwright/test');
+//const data = require('../support/fixtures/movies.json');
 
 export class Movie{
 
@@ -23,16 +24,16 @@ export class Movie{
         await this.page.getByRole('button', {name: 'Cadastrar'}).click();
      }
 
-     async create(title,overview,company,release_year){
+     async create(movie){
 
         await this.goForm();
         //Title
         //getByLabel buscar atravez da label pai propriedade "for" 
         //e vai navegando internamente até o input e preenche (se conter o mesmo nome no input)
-        await this.page.getByLabel("Titulo do filme").fill(title);
+        await this.page.getByLabel("Titulo do filme").fill(movie.title);
 
         //OverView
-        await this.page.locator("#overview").fill(overview);
+        await this.page.locator("#overview").fill(movie.overview);
 
         //Select Company
         await this.page.locator('#select_company_id .react-select__indicator')
@@ -40,7 +41,7 @@ export class Movie{
 
         //navega até o elemento select, filtra por texto com hastext
         await this.page.locator('.react-select__option')
-        .filter({hasText: company})
+        .filter({hasText: movie.company})
         .click();
 
         //Select Year
@@ -49,9 +50,12 @@ export class Movie{
 
         //navega até o elemento select, filtra por texto com hastext
         await this.page.locator('.react-select__option')
-        .filter({hasText: release_year})
+        .filter({hasText: movie.release_year})
         .click();
 
+        await this.page.locator("input[name='cover']")
+        .setInputFiles('tests/support/fixtures'+movie.cover);
+        
         await this.submit();
         
      }
