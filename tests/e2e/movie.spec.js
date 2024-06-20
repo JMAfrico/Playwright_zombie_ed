@@ -1,5 +1,4 @@
-//const { test, expect } = require('@playwright/test');
-const { test } = require('../support')
+const { test } = require('../support');
 const data = require('../support/fixtures/movies.json');
 const { executeSQL } = require('../support/database');
 
@@ -25,6 +24,17 @@ test('deve cadastrar um novo filme', async ({ page }) => {
     await page.toast.haveText('Cadastro realizado com sucesso')
 })
 
+test('nao deve cadastrar um filme que ja existe', async ({ page }) => {
+
+    const movie = data.filme.resident_evil_o_hospedeiro;
+    await executeSQL(`DELETE from movies WHERE title = '${movie.title}';`)
+
+    await page.login.logar('admin@zombieplus.com', 'pwd123');
+    await page.movie.create(movie);
+    await page.toast.haveText('Cadastro realizado com sucesso')
+    await page.movie.create(movie);
+    await page.toast.haveText('Este conteúdo já encontra-se cadastrado no catálogo')
+})
 test('nao deve permitir criar filme sem preencher campos obrigatórios', async ({page})=>{
     await page.login.logar('admin@zombieplus.com', 'pwd123');
     await page.movie.goForm();

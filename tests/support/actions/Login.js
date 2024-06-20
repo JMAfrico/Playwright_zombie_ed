@@ -27,7 +27,7 @@ export class Login {
      }
 
      async alertHaveText(text){
-      //esse é um locator css onde o $ significa que
+      //esse é um locator css onde o $ significa que termina com
       const alert = this.page.locator('span[class$=alert]')
       await expect(alert).toHaveText(text);
      }
@@ -37,7 +37,6 @@ export class Login {
       await this.page.waitForLoadState('networkidle');
       //await expect(this.page).toHaveURL('http://localhost:3000/admin/movies');
       await expect(this.page).toHaveURL(/.*movies/);
-
       const logedUser = this.page.locator('.logged-user');
       await expect(logedUser).toContainText('Olá,');
    }

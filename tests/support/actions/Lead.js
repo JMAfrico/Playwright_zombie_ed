@@ -22,8 +22,4 @@ export class Lead {
         await this.page.locator('#email').fill(email);
         await this.page.getByTestId('modal').getByText('Quero entrar na fila!').click();
     }
-
-
-
-
 }
