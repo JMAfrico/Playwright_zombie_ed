@@ -15,6 +15,7 @@ const { Login } = require('./actions/Login');
 const { Movie } = require('./actions/Movie')
 const { Lead } = require('./actions/Lead');
 const { Toast, Alert } = require('./actions/Components');
+const { Api } = require('./api/index')
 
 /*Criação de instância (extensão) dos arquivos Page*/
 const test = base.extend({
@@ -25,6 +26,12 @@ const test = base.extend({
         context['movie'] = new Movie(page);
         context['toast'] = new Toast(page);
         context['alert'] = new Alert(page);
+        await use(context);
+    },
+
+    request: async({request},use)=>{
+        const context = request;
+        context['api'] = new Api(request);
         await use(context);
     }
 })

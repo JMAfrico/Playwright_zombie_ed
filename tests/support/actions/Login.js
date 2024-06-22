@@ -7,9 +7,9 @@ export class Login {
      }
 
      async logar(email,senha){
-         this.visit();
-         this.submit(email,senha);
-         this.isLoggedIn();
+         await this.visit();
+         await this.submit(email,senha);
+         await this.isLoggedIn();
      }
 
      async visit(){
