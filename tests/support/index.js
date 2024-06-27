@@ -14,7 +14,7 @@ const { test: base, expect } = require('@playwright/test');
 const { Login } = require('./actions/Login');
 const { Movie } = require('./actions/Movie')
 const { Lead } = require('./actions/Lead');
-const { Toast, Alert } = require('./actions/Components');
+const { Toast, Alert , Popup} = require('./actions/Components');
 const { Api } = require('./api/index')
 
 /*Criação de instância (extensão) dos arquivos Page*/
@@ -26,6 +26,7 @@ const test = base.extend({
         context['movie'] = new Movie(page);
         context['toast'] = new Toast(page);
         context['alert'] = new Alert(page);
+        context['popup'] = new Popup(page);
         await use(context);
     },
 

@@ -27,10 +27,10 @@
     "exterminio": {
       "title": "Extermínio",
       "overview": "Um vírus transforma as pessoas em raivosos assassinos. Um grupo tenta sobreviver na desolada Londres.",
-      "company": "Fox Searchlight Pictures",
+      "company": "Sony Pictures",
       "release_year": 2002,
-      "featured": true,
-      "cover": "/covers/movies/exterminio.png"
+      "featured": false,
+      "cover": "/covers/movies/exterminio.jpg"
     },
     "madrugada_dos_mortos": {
       "title": "Madrugada dos Mortos",

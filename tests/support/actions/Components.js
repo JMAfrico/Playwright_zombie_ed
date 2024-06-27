@@ -24,3 +24,15 @@ export class Alert{
         await expect(this.page.locator('.alert')).toHaveText(message);
     }
 }
+
+export class Popup{
+
+    constructor(page){
+        this.page = page;
+    }
+
+    async haveText(message){
+        const element = await this.page.locator('.swal2-html-container')
+        await expect(element).toHaveText(message);
+    }
+}

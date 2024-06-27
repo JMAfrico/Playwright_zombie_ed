@@ -47,8 +47,8 @@ test('Adicionar um lead com sucesso', async ({ page }) => {
   await page.lead.visit();
   await page.lead.openLeadModal();
   await page.lead.submitFormLead(randomName, randomEmail);
-  const msg = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
-  await page.toast.haveText(msg)
+  const msg = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato.'
+  await page.popup.haveText(msg)
 });
 
 test('Tentativa de cadastrar um lead ja cadastrado', async ({ page, request }) => {
@@ -71,8 +71,8 @@ test('Tentativa de cadastrar um lead ja cadastrado', async ({ page, request }) =
   await page.lead.visit();
   await page.lead.openLeadModal();
   await page.lead.submitFormLead(randomName, randomEmail);
-  const msg = 'O endereço de e-mail fornecido já está registrado em nossa fila de espera.'
-  await page.toast.haveText(msg)
+  const msg = 'Verificamos que o endereço de e-mail fornecido já consta em nossa lista de espera. Isso significa que você está um passo mais perto de aproveitar nossos serviços.'
+  await page.popup.haveText(msg)
 });
 
 

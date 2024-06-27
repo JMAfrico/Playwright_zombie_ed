@@ -11,8 +11,8 @@ test('deve logar como adm', async ({ page }) => {
     await page.login.visit();
     await page.login.submit('admin@zombieplus.com','123123');
 
-    const msg = 'Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.'
-    await page.toast.haveText(msg)
+    const msg = 'Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.'
+    await page.popup.haveText(msg)
   });
 
   test('nao deve logar quando o email é invalido', async ({ page }) => {

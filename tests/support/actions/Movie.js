@@ -68,4 +68,9 @@ export class Movie {
       await this.setFeature(movie);
       await this.submit();
    }
+
+   async delete(movie){
+      await this.page.getByRole('row', {name: movie.title}).getByRole('button').click();
+      await this.page.click('.confirm-removal');
+   }
 }

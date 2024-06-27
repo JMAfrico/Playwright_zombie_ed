@@ -21,7 +21,7 @@ test('deve cadastrar um novo filme', async ({ page }) => {
 
     await page.login.logar('admin@zombieplus.com', 'pwd123');
     await page.movie.create(movie);
-    await page.toast.haveText('Cadastro realizado com sucesso')
+    await page.popup.haveText(`O filme '${movie.title}' foi adicionado ao catálogo.`)
 })
 
 test('Web - nao deve cadastrar um filme que ja existe', async ({ page,request }) => {
@@ -32,36 +32,14 @@ test('Web - nao deve cadastrar um filme que ja existe', async ({ page,request })
 
     await page.login.logar('admin@zombieplus.com', 'pwd123');
     await page.movie.create(movie);
-    await page.toast.haveText('Cadastro realizado com sucesso');
+    await page.popup.haveText(`O filme '${movie.title}' foi adicionado ao catálogo.`)
+    await page.getByRole('button',{name:'Ok'}).click();
     await page.movie.create(movie);
-    await page.toast.haveText('Este conteúdo já encontra-se cadastrado no catálogo')
+    await page.popup.haveText(`O título '${movie.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`)
 })
 
 test('API - nao deve cadastrar um filme que ja existe', async ({ page,request }) => {
   
-    /*Captura de token
-    //Fazer request post na rota sessions, passando o body que esta em 'data'
-    const response = await request.post('http://localhost:3333/sessions',{
-        data:{
-            email:'admin@zombieplus.com',
-            password: 'pwd123'
-        }
-    })
-
-    //Analisar o response da request
-    //se é da familia 200(ok)
-    expect(response.ok()).toBeTruthy();
-
-    // mostra todo o payload da resposta em texto
-    console.log(await response.text()) 
-    
-    //Função parse para converter o formato texto do body para formato Json
-    const body = JSON.parse(await response.text());
-    console.log(body);
-
-    console.log(body.token)
-    const token = body.token;*/
-
     const movie = data.filme.resident_evil_o_hospedeiro;
 
     await executeSQL(`DELETE from movies WHERE title = '${movie.title}';`);
@@ -69,7 +47,7 @@ test('API - nao deve cadastrar um filme que ja existe', async ({ page,request })
     await request.api.createMovie(movie);
     await page.login.logar('admin@zombieplus.com', 'pwd123');
     await page.movie.create(movie);
-    await page.toast.haveText('Este conteúdo já encontra-se cadastrado no catálogo');
+    await page.popup.haveText(`O título '${movie.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`)
 })
 
 test('nao deve permitir criar filme sem preencher campos obrigatórios', async ({page})=>{
@@ -77,8 +55,16 @@ test('nao deve permitir criar filme sem preencher campos obrigatórios', async (
     await page.movie.goForm();
     await page.movie.submit();
     await page.alert.haveText([
-        'Por favor, informe o título.',
-        'Por favor, informe a sinopse.',
-        'Por favor, informe a empresa distribuidora.',
-        'Por favor, informe o ano de lançamento.'])
+        'Campo obrigatório',
+        'Campo obrigatório',
+        'Campo obrigatório',
+        'Campo obrigatório'])
+})
+
+test('deve remover um filme', async ({page,request})=>{
+    const movie = data.filme.exterminio;
+    await request.api.createMovie(movie);
+    await page.login.logar('admin@zombieplus.com', 'pwd123');
+    await page.movie.delete(movie);
+    await page.popup.haveText('Filme removido com sucesso.');
 })
