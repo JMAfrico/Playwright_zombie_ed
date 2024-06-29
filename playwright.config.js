@@ -25,6 +25,7 @@ module.exports = defineConfig({
     ['list'],
     ['html'],
     ['json', {  outputFile: 'test-results.json' }],
+    ['playwright-tesults-reporter', {'tesults-target': process.env.TOKEN}]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
