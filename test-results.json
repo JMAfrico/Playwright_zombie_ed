@@ -1,0 +1,883 @@
+{
+  "config": {
+    "configFile": "C:\\JoaoCursos\\QAx\\project\\playwright.config.js",
+    "rootDir": "C:/JoaoCursos/QAx/project/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/JoaoCursos/QAx/project/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/JoaoCursos/QAx/project/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.44.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e\\lead.spec.js",
+      "file": "e2e/lead.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Lead com email invalido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 16436,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:12:53.832Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-email-invalido-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-email-invalido-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "768608b03f4062a69af5-803b321e3d63083243c8",
+          "file": "e2e/lead.spec.js",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Lead com dado nome vazio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 16460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:12:53.931Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-dado-nome-vazio-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-dado-nome-vazio-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "768608b03f4062a69af5-7e161f04f43b2ff84b2b",
+          "file": "e2e/lead.spec.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Lead com dado email vazio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 7550,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:12.936Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-dado-email-vazio-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-dado-email-vazio-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "768608b03f4062a69af5-dd2b9eb98143aeda06b2",
+          "file": "e2e/lead.spec.js",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Lead com dados vazios",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 7570,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:12.939Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-dados-vazios-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-dados-vazios-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "768608b03f4062a69af5-36e2258675fbf52b37ee",
+          "file": "e2e/lead.spec.js",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "Adicionar um lead com sucesso",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 6453,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:20.550Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Adicionar-um-lead-com-sucesso-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Adicionar-um-lead-com-sucesso-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "768608b03f4062a69af5-e4653474e611b2e40110",
+          "file": "e2e/lead.spec.js",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Tentativa de cadastrar um lead ja cadastrado",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 6552,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:20.553Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Tentativa-de-cadastrar-um-lead-ja-cadastrado-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Tentativa-de-cadastrar-um-lead-ja-cadastrado-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "768608b03f4062a69af5-f822500ed238371b0132",
+          "file": "e2e/lead.spec.js",
+          "line": 54,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\login.spec.js",
+      "file": "e2e/login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "deve logar como adm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 5215,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:27.047Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-deve-logar-como-adm-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-deve-logar-como-adm-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-3ddfc4a2907df90439bd",
+          "file": "e2e/login.spec.js",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "nao deve logar com senha errada",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 6800,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:27.159Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-com-senha-errada-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-com-senha-errada-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-96545be3fda0610cdae1",
+          "file": "e2e/login.spec.js",
+          "line": 10,
+          "column": 3
+        },
+        {
+          "title": "nao deve logar quando o email é invalido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 3782,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:32.293Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-o-email-é-invalido-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-o-email-é-invalido-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-096ecaa7fe845698b98a",
+          "file": "e2e/login.spec.js",
+          "line": 18,
+          "column": 3
+        },
+        {
+          "title": "nao deve logar quando o email nao e preenchido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 3509,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:33.996Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-o-email-nao-e-preenchido-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-o-email-nao-e-preenchido-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-7f0993db0434b2cba5e7",
+          "file": "e2e/login.spec.js",
+          "line": 24,
+          "column": 3
+        },
+        {
+          "title": "nao deve logar quando a senha nao e preenchida",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 8244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:36.100Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-a-senha-nao-e-preenchida-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-a-senha-nao-e-preenchida-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-ac93330d68b27532645e",
+          "file": "e2e/login.spec.js",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "nao deve logar quando nenhum campo é preenchido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 6139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:37.541Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-nenhum-campo-é-preenchido-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-nao-deve-logar-quando-nenhum-campo-é-preenchido-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-0dcfe8439120b24e6c20",
+          "file": "e2e/login.spec.js",
+          "line": 36,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "e2e\\movie.spec.js",
+      "file": "e2e/movie.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "(sem contexto)deve cadastrar um novo filme",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 1138,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:43.903Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie--sem-contexto-deve-cadastrar-um-novo-filme-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie--sem-contexto-deve-cadastrar-um-novo-filme-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-1aafb68c7eb873374f39",
+          "file": "e2e/movie.spec.js",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "deve cadastrar um novo filme",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 14232,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:44.637Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-15f3bf8ef79bb289e598",
+          "file": "e2e/movie.spec.js",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Web - nao deve cadastrar um filme que ja existe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 18114,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:45.075Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-93cde7eae47436272bac",
+          "file": "e2e/movie.spec.js",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "API - nao deve cadastrar um filme que ja existe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 15863,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:13:58.945Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-11c915dd83ba3bab8785",
+          "file": "e2e/movie.spec.js",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "nao deve permitir criar filme sem preencher campos obrigatórios",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 13080,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:14:03.248Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-1f6d10716523f4eab260",
+          "file": "e2e/movie.spec.js",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "deve remover um filme",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 8887,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-29T16:14:15.286Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-remover-um-filme-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-remover-um-filme-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-d7db891c3c3797a27569",
+          "file": "e2e/movie.spec.js",
+          "line": 64,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-06-29T16:12:23.162Z",
+    "duration": 121435.129,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
