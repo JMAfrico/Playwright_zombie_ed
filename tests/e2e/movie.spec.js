@@ -44,7 +44,7 @@ test('API - nao deve cadastrar um filme que ja existe', async ({ page,request })
 
     await executeSQL(`DELETE from movies WHERE title = '${movie.title}';`);
 
-    await request.api.createMovie(movie);
+    await request.moviesApi.createMovie(movie);
     await page.login.logar('admin@zombieplus.com', 'pwd123');
     await page.movie.create(movie);
     await page.popup.haveText(`O título '${movie.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`)
@@ -63,7 +63,7 @@ test('nao deve permitir criar filme sem preencher campos obrigatórios', async (
 
 test('deve remover um filme', async ({page,request})=>{
     const movie = data.filme.exterminio;
-    await request.api.createMovie(movie);
+    await request.moviesApi.createMovie(movie);
     await page.login.logar('admin@zombieplus.com', 'pwd123');
     await page.movie.delete(movie);
     await page.popup.haveText('Filme removido com sucesso.');
