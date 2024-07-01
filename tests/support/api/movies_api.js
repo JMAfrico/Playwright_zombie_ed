@@ -40,6 +40,7 @@ export class MoviesApi {
         const body = JSON.parse(await response.text())
         return body.data[0].id;
     }
+
     async createMovie(movie) {
         await this.createToken();
         let companyId = await this.getCompanyIdByName(movie.company)
@@ -57,6 +58,34 @@ export class MoviesApi {
                 release_year: movie.release_year,
                 featured: movie.featured
                 
+            }
+        })
+        expect(response.ok()).toBeTruthy();
+    }
+
+    async getMovieIdByTitle(movieTitle){
+        await this.createToken();
+
+        const response = await this.request.get(this.baseAPI +'/movies',{
+            headers:{
+                Authorization: this.token
+            },
+            params:{
+                title:movieTitle
+            }
+            
+        })
+        expect(response.ok()).toBeTruthy();
+        const body = JSON.parse(await response.text())
+        return body.data[0].id;
+    }
+
+    async deleteMovie(movie){
+        let movieId = await this.getMovieIdByTitle(movie.title);
+
+        const response = await this.request.delete(this.baseAPI +'/movies/'+movieId,{
+            headers:{
+                Authorization: this.token
             }
         })
         expect(response.ok()).toBeTruthy();

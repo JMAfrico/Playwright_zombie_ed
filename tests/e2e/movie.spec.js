@@ -61,10 +61,16 @@ test('nao deve permitir criar filme sem preencher campos obrigatórios', async (
         'Campo obrigatório'])
 })
 
-test('deve remover um filme', async ({page,request})=>{
+test('WEB - deve remover um filme', async ({page,request})=>{
     const movie = data.filme.exterminio;
     await request.moviesApi.createMovie(movie);
     await page.login.logar('admin@zombieplus.com', 'pwd123');
     await page.movie.delete(movie);
     await page.popup.haveText('Filme removido com sucesso.');
+})
+
+test('API - deve remover um filme', async ({page,request})=>{
+    const movie = data.filme.exterminio;
+    await request.moviesApi.createMovie(movie);
+    await request.moviesApi.deleteMovie(movie);
 })

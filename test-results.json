@@ -71,7 +71,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "API - nao deve cadastrar um filme que ja existe",
+          "title": "API - deve remover um filme",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,33 +83,29 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 4,
                   "status": "passed",
-                  "duration": 16077,
+                  "duration": 3647,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[]\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-01T16:49:49.054Z",
+                  "startTime": "2024-07-01T18:58:22.793Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\test-finished-1.png"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---deve-remover-um-filme-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\video.webm"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---deve-remover-um-filme-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\trace.zip"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---deve-remover-um-filme-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -117,9 +113,9 @@
               "status": "expected"
             }
           ],
-          "id": "19016ccb9f8f0f3afc3a-11c915dd83ba3bab8785",
+          "id": "19016ccb9f8f0f3afc3a-705189a3c15d4d69f10d",
           "file": "e2e/movie.spec.js",
-          "line": 41,
+          "line": 72,
           "column": 1
         }
       ]
@@ -127,8 +123,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-07-01T16:49:39.589Z",
-    "duration": 27214.037000000004,
+    "startTime": "2024-07-01T18:58:12.752Z",
+    "duration": 16072.985999999917,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
