@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -71,7 +71,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "API - deve remover um filme",
+          "title": "deve cadastrar um novo filme",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,29 +83,33 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "status": "passed",
-                  "duration": 3647,
+                  "duration": 27166,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-01T18:58:22.793Z",
+                  "startTime": "2024-07-02T21:20:34.316Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---deve-remover-um-filme-chromium\\test-finished-1.png"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---deve-remover-um-filme-chromium\\video.webm"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-API---deve-remover-um-filme-chromium\\trace.zip"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -113,9 +117,157 @@
               "status": "expected"
             }
           ],
-          "id": "19016ccb9f8f0f3afc3a-705189a3c15d4d69f10d",
+          "id": "19016ccb9f8f0f3afc3a-15f3bf8ef79bb289e598",
           "file": "e2e/movie.spec.js",
-          "line": 72,
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Web - nao deve cadastrar um filme que ja existe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "passed",
+                  "duration": 28417,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-07-02T21:20:34.374Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-93cde7eae47436272bac",
+          "file": "e2e/movie.spec.js",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "nao deve permitir criar filme sem preencher campos obrigatórios",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "passed",
+                  "duration": 13873,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-07-02T21:21:03.903Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-1f6d10716523f4eab260",
+          "file": "e2e/movie.spec.js",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "WEB - deve remover um filme",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "passed",
+                  "duration": 10207,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-07-02T21:21:11.446Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-WEB---deve-remover-um-filme-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-WEB---deve-remover-um-filme-chromium\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-WEB---deve-remover-um-filme-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19016ccb9f8f0f3afc3a-fcb9c12f27a8ef4099e3",
+          "file": "e2e/movie.spec.js",
+          "line": 40,
           "column": 1
         }
       ]
@@ -123,9 +275,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-07-01T18:58:12.752Z",
-    "duration": 16072.985999999917,
-    "expected": 1,
+    "startTime": "2024-07-02T21:20:24.679Z",
+    "duration": 59562.92200000002,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
