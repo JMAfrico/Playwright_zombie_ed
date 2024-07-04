@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -65,13 +65,13 @@
   },
   "suites": [
     {
-      "title": "e2e\\movie.spec.js",
-      "file": "e2e/movie.spec.js",
+      "title": "api\\lead_api.spec.js",
+      "file": "api/lead_api.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "deve cadastrar um novo filme",
+          "title": "API - Deve deletar um lead",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,133 +83,19 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 9,
                   "status": "passed",
-                  "duration": 27166,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-07-02T21:20:34.316Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "19016ccb9f8f0f3afc3a-15f3bf8ef79bb289e598",
-          "file": "e2e/movie.spec.js",
-          "line": 5,
-          "column": 1
-        },
-        {
-          "title": "Web - nao deve cadastrar um filme que ja existe",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "status": "passed",
-                  "duration": 28417,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-07-02T21:20:34.374Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-Web---nao-deve-cadastrar-um-filme-que-ja-existe-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "19016ccb9f8f0f3afc3a-93cde7eae47436272bac",
-          "file": "e2e/movie.spec.js",
-          "line": 15,
-          "column": 1
-        },
-        {
-          "title": "nao deve permitir criar filme sem preencher campos obrigatórios",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 13873,
+                  "duration": 727,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-02T21:21:03.903Z",
+                  "startTime": "2024-07-04T20:56:30.914Z",
                   "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\video.webm"
-                    },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-nao-deve-permiti-4cda4-eencher-campos-obrigatórios-chromium\\trace.zip"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\api-lead_api-API---Deve-deletar-um-lead-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -217,57 +103,9 @@
               "status": "expected"
             }
           ],
-          "id": "19016ccb9f8f0f3afc3a-1f6d10716523f4eab260",
-          "file": "e2e/movie.spec.js",
-          "line": 29,
-          "column": 1
-        },
-        {
-          "title": "WEB - deve remover um filme",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "status": "passed",
-                  "duration": 10207,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-07-02T21:21:11.446Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-WEB---deve-remover-um-filme-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-WEB---deve-remover-um-filme-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-WEB---deve-remover-um-filme-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "19016ccb9f8f0f3afc3a-fcb9c12f27a8ef4099e3",
-          "file": "e2e/movie.spec.js",
-          "line": 40,
+          "id": "f52f5ab69082b2ed0295-6c532914b7c096ae9920",
+          "file": "api/lead_api.spec.js",
+          "line": 24,
           "column": 1
         }
       ]
@@ -275,9 +113,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-07-02T21:20:24.679Z",
-    "duration": 59562.92200000002,
-    "expected": 4,
+    "startTime": "2024-07-04T20:56:17.087Z",
+    "duration": 14879.976999999955,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

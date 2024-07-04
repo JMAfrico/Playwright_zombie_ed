@@ -51,28 +51,6 @@ test('Adicionar um lead com sucesso', async ({ page }) => {
   await page.popup.haveText(msg)
 });
 
-test('Tentativa de cadastrar um lead ja cadastrado', async ({ page, request }) => {
-  const randomName = faker.person.fullName(); 
-  const randomEmail = faker.internet.email();
 
-  //adicionar request no argumento
-  //chamar o request.post
-  //adicionar numa constante
-  //verificar o resultado esperado ok(familia 200)
-  const newLead = await request.post('http://localhost:3333/leads',{
-    data:{
-      name: randomName, 
-      email: randomEmail
-    }
-  })
-
-  await expect(newLead.ok()).toBeTruthy();
-  
-  await page.lead.visit();
-  await page.lead.openLeadModal();
-  await page.lead.submitFormLead(randomName, randomEmail);
-  const msg = 'Verificamos que o endereço de e-mail fornecido já consta em nossa lista de espera. Isso significa que você está um passo mais perto de aproveitar nossos serviços.'
-  await page.popup.haveText(msg)
-});
 
 

@@ -17,6 +17,7 @@ const { Lead } = require('./actions/Lead');
 const { Toast, Alert , Popup} = require('./actions/Components');
 const { Api } = require('./api/index')
 const {MoviesApi} = require('./api/movies_api')
+const {LeadApi} = require('./api/lead_api')
 
 /*Criação de instância (extensão) dos arquivos Page*/
 const test = base.extend({
@@ -35,6 +36,7 @@ const test = base.extend({
         const context = request;
         context['api'] = new Api(request);
         context['moviesApi'] = new MoviesApi(request);
+        context['leadApi'] = new LeadApi(request);
         await use(context);
     }
 })
