@@ -1,8 +1,13 @@
 const { test, expect } = require('../support');
-const { executeSQL } = require('../support/database');
 const { faker } = require('@faker-js/faker');
 
-test('API - Deve cadastrar um novo lead',async({request})=>{
+test('API - Deve buscar um lead', async ({ request }) => {
+    const randomName = faker.person.fullName();
+    const randomEmail = faker.internet.email();
+    await request.leadApi.createLead(randomName, randomEmail);
+    await request.leadApi.getLead(randomEmail)
+})
+test('API - Deve cadastrar um novo lead', async ({ request }) => {
     const randomName = faker.person.fullName();
     const randomEmail = faker.internet.email();
 
@@ -21,7 +26,7 @@ test('API - Tentativa de cadastrar um lead ja cadastrado', async ({ page, reques
     await page.popup.haveText(msg);
 });
 
-test('API - Deve deletar um lead',async({request})=>{
+test('API - Deve deletar um lead', async ({ request }) => {
     const randomName = faker.person.fullName();
     const randomEmail = faker.internet.email();
 

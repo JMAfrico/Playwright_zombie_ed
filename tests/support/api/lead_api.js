@@ -23,6 +23,24 @@ export class LeadApi {
 
     }
 
+    
+    async getLead(email){
+        await this.createToken();
+        const response = await this.request.get(this.baseAPI + '/leads',{
+            headers:{
+                Authorization: this.token
+            },
+            params:{
+                email: email
+            }
+        })
+
+        expect(response.ok()).toBeTruthy();
+        const body = await response.json();
+        expect(body.data[0].email).toEqual(email);
+        console.log(body)
+    }
+
     async createLead(name, email) {
         const response = await this.request.post(this.baseAPI + '/leads', {
             data: {

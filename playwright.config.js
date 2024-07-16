@@ -36,7 +36,13 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
     screenshot:'on',
     video:'on',
-    baseURL: process.env.BASE_URL
+    baseURL: process.env.BASE_URL,
+    launchOptions:{
+      logger:{
+        isEnabled:(name,severity) =>true,
+        log: (name,severity,message,args, hints) => console.log(`${name} ${severity} ${message}`)
+      }
+    }
   },
 
   /* Configure projects for major browsers */

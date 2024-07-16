@@ -1,3 +1,5 @@
+import { title } from 'process';
+
 const { expect } = require('@playwright/test')
 require('dotenv').config();
 
@@ -9,6 +11,7 @@ export class MoviesApi {
         this.token = undefined;
     }
 
+    //Criar get
     async createToken() {
 
         const response = await this.request.post(this.baseAPI +'/sessions', {
@@ -22,6 +25,23 @@ export class MoviesApi {
         const body = JSON.parse(await response.text());
         this.token = 'Baerer '+body.token;
         
+    }
+
+    async getMovie(movieTitle){
+        await this.createToken();
+        const response = await this.request.get(this.baseAPI +'/movies',{
+            headers:{
+                Authorization: this.token
+            },
+            params:{
+                title:movieTitle
+            }
+        });
+
+        expect(response.ok()).toBeTruthy();
+        const body = JSON.parse(await response.text());
+        expect(body.data[0].title).toEqual(movieTitle);
+        console.log(body);
     }
 
     async getCompanyIdByName(companyName){
