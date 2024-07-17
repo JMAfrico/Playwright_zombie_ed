@@ -9,6 +9,7 @@ export class LeadApi {
         this.token = undefined;
     }
 
+    //Criar Token
     async createToken() {
         const response = await this.request.post(this.baseAPI + '/sessions', {
             data: {
@@ -23,7 +24,7 @@ export class LeadApi {
 
     }
 
-    
+    //Get Lead
     async getLead(email){
         await this.createToken();
         const response = await this.request.get(this.baseAPI + '/leads',{
@@ -41,6 +42,7 @@ export class LeadApi {
         console.log(body)
     }
 
+    //Create Lead
     async createLead(name, email) {
         const response = await this.request.post(this.baseAPI + '/leads', {
             data: {
@@ -49,8 +51,11 @@ export class LeadApi {
             }
         })
         await expect(response.ok()).toBeTruthy();
+        const body = JSON.parse(await response.text())
+        console.log(body);
     };
 
+    //Get Lead Id Por Email
     async getLeadIdByEmail(email) {
         await this.createToken();
 
@@ -68,6 +73,7 @@ export class LeadApi {
         return body.data[0].id;
     }
 
+    //Delete Lead
     async deleteLead(email){
         let leadId = await this.getLeadIdByEmail(email);
 

@@ -26,7 +26,7 @@ export class Lead {
     }
 
     async submitFormLead(nome,email) {
-        this.page.on('console', msg => console.log(msg.text() +" : Preenchendo formulário formulario"));
+        this.page.on('console', msg => console.log(msg.text() +" : Preenchendo formulário"));
         await this.page.getByPlaceholder("Informe seu nome").fill(nome);
         await this.page.locator('#email').fill(email);
         await this.page.getByTestId('modal').getByText('Quero entrar na fila!').click();

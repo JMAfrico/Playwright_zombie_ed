@@ -11,7 +11,7 @@ export class MoviesApi {
         this.token = undefined;
     }
 
-    //Criar get
+    //Token
     async createToken() {
 
         const response = await this.request.post(this.baseAPI +'/sessions', {
@@ -27,6 +27,7 @@ export class MoviesApi {
         
     }
 
+    //Get Movie
     async getMovie(movieTitle){
         await this.createToken();
         const response = await this.request.get(this.baseAPI +'/movies',{
@@ -44,6 +45,7 @@ export class MoviesApi {
         console.log(body);
     }
 
+    //Get Company Id por Nome
     async getCompanyIdByName(companyName){
         await this.createToken();
 
@@ -61,6 +63,7 @@ export class MoviesApi {
         return body.data[0].id;
     }
 
+    //Create Movie
     async createMovie(movie) {
         await this.createToken();
         let companyId = await this.getCompanyIdByName(movie.company)
@@ -81,8 +84,11 @@ export class MoviesApi {
             }
         })
         expect(response.ok()).toBeTruthy();
+        const body = JSON.parse(await response.text())
+        console.log(body);
     }
 
+    //Get Movie Id por Title
     async getMovieIdByTitle(movieTitle){
         await this.createToken();
 
@@ -100,6 +106,7 @@ export class MoviesApi {
         return body.data[0].id;
     }
 
+    //Delete movie
     async deleteMovie(movie){
         let movieId = await this.getMovieIdByTitle(movie.title);
 

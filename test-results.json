@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\JoaoCursos\\QAx\\project\\playwright.config.js",
-    "rootDir": "c:/JoaoCursos/QAx/project/tests",
+    "configFile": "C:\\JoaoCursos\\QAx\\project\\playwright.config.js",
+    "rootDir": "C:/JoaoCursos/QAx/project/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -30,7 +30,7 @@
         }
       ],
       [
-        "c:\\JoaoCursos\\QAx\\project\\node_modules\\playwright-tesults-reporter\\playwright-tesults-reporter.js",
+        "C:\\JoaoCursos\\QAx\\project\\node_modules\\playwright-tesults-reporter\\playwright-tesults-reporter.js",
         {
           "tesults-target": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjA5ZjVkZTIyLWVlN2EtNGVjNy1iZjg3LWNkMzVhOTRlZGRkNy0xNzE5Njc4MDA5MDA4IiwiZXhwIjo0MTAyNDQ0ODAwMDAwLCJ2ZXIiOiIwIiwic2VzIjoiYjhhMmI1MTItNzE5NC00MThlLTg5OTktYTljM2NiNTczMjEzIiwidHlwZSI6InQifQ.2UluZJ9MAsQ6gvMLroPvqWcpyB3vny_sJo_Sw_OTzJk"
         }
@@ -43,13 +43,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/JoaoCursos/QAx/project/test-results",
+        "outputDir": "C:/JoaoCursos/QAx/project/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/JoaoCursos/QAx/project/tests",
+        "testDir": "C:/JoaoCursos/QAx/project/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -65,13 +65,13 @@
   },
   "suites": [
     {
-      "title": "e2e\\lead.spec.js",
-      "file": "e2e/lead.spec.js",
+      "title": "e2e\\movie.spec.js",
+      "file": "e2e/movie.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Lead com email invalido",
+          "title": "deve cadastrar um novo filme",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,100 +83,66 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 15,
                   "status": "passed",
-                  "duration": 5858,
+                  "duration": 22550,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "api info => browser.newContext started\n"
+                      "text": "[]\n"
                     },
                     {
-                      "text": "api info <= browser.newContext succeeded\n"
+                      "text": "Acessando a página de Login\n"
                     },
                     {
-                      "text": "api info => browserContext.newPage started\n"
+                      "text": "Realizando login\n"
                     },
                     {
-                      "text": "api info <= browserContext.newPage succeeded\n"
+                      "text": "Verificando se está logado\n"
                     },
                     {
-                      "text": "api info => page.goto started\n"
+                      "text": "Acessando Formulario de Filmes\n"
                     },
                     {
-                      "text": "api info <= page.goto succeeded\n"
+                      "text": "Preencher Titulo do Filme\n"
                     },
                     {
-                      "text": "api info => locator.click started\n"
+                      "text": "Preenche sinopse do Filme\n"
                     },
                     {
-                      "text": "api info <= locator.click succeeded\n"
+                      "text": "Seleciona a produtora do Filme\n"
                     },
                     {
-                      "text": "api info => expect.toHaveText started\n"
+                      "text": "Seleciona o ano do Filme\n"
                     },
                     {
-                      "text": "api info <= expect.toHaveText succeeded\n"
+                      "text": "Seleciona a capa do Filme\n"
                     },
                     {
-                      "text": "api info => locator.fill started\n"
+                      "text": "Seleciona conteudo destaque\n"
                     },
                     {
-                      "text": "api info <= locator.fill succeeded\n"
-                    },
-                    {
-                      "text": "api info => locator.fill started\n"
-                    },
-                    {
-                      "text": "api info <= locator.fill succeeded\n"
-                    },
-                    {
-                      "text": "api info => locator.click started\n"
-                    },
-                    {
-                      "text": "ir : Acessando a página\n"
-                    },
-                    {
-                      "text": "ir : Abrindo modal\n"
-                    },
-                    {
-                      "text": "ir : Preenchendo formulário formulario\n"
-                    },
-                    {
-                      "text": "api info <= locator.click succeeded\n"
-                    },
-                    {
-                      "text": "api info => expect.toHaveText started\n"
-                    },
-                    {
-                      "text": "api info <= expect.toHaveText succeeded\n"
-                    },
-                    {
-                      "text": "api info => page.screenshot started\n"
-                    },
-                    {
-                      "text": "api info <= page.screenshot succeeded\n"
-                    },
-                    {
-                      "text": "api info => video.saveAs started\n"
-                    },
-                    {
-                      "text": "api info <= video.saveAs succeeded\n"
+                      "text": "Clicar em Botao Enviar\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-10T02:54:22.121Z",
+                  "startTime": "2024-07-17T01:05:05.739Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "c:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-email-invalido-chromium\\test-finished-1.png"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "c:\\JoaoCursos\\QAx\\project\\test-results\\e2e-lead-Lead-com-email-invalido-chromium\\video.webm"
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-movie-deve-cadastrar-um-novo-filme-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -184,8 +150,8 @@
               "status": "expected"
             }
           ],
-          "id": "768608b03f4062a69af5-803b321e3d63083243c8",
-          "file": "e2e/lead.spec.js",
+          "id": "19016ccb9f8f0f3afc3a-15f3bf8ef79bb289e598",
+          "file": "e2e/movie.spec.js",
           "line": 5,
           "column": 1
         }
@@ -194,8 +160,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-07-10T02:54:05.548Z",
-    "duration": 23971.789,
+    "startTime": "2024-07-17T01:04:55.414Z",
+    "duration": 36707.3320000004,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

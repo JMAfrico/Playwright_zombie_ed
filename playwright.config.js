@@ -37,12 +37,12 @@ module.exports = defineConfig({
     screenshot:'on',
     video:'on',
     baseURL: process.env.BASE_URL,
-    launchOptions:{
-      logger:{
-        isEnabled:(name,severity) =>true,
-        log: (name,severity,message,args, hints) => console.log(`${name} ${severity} ${message}`)
-      }
-    }
+    // launchOptions:{
+    //   logger:{
+    //     isEnabled:(name,severity) =>true,
+    //     log: (name,severity,message,args, hints) => console.log(`${severity} ${message}`)
+    //   }
+    // }
   },
 
   /* Configure projects for major browsers */
