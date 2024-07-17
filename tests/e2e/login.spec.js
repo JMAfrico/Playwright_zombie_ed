@@ -1,4 +1,5 @@
 //const { test, expect } = require('@playwright/test');
+const { afterEach } = require('node:test');
 const { test, expect} = require('../support');
 
 test('deve logar como adm', async ({ page }) => {
@@ -38,3 +39,8 @@ test('deve logar como adm', async ({ page }) => {
     await page.login.submit('','');
     await page.login.alertHaveText(['Campo obrigatório','Campo obrigatório']);
   });
+
+  afterEach(async()=>{
+    //Tira um print a cada step
+    //await page.screenshot({path: Date.now() +'screenshot.png'});
+  })

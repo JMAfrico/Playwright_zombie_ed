@@ -77,9 +77,9 @@ export class Movie {
       await this.submit();
    }
 
-   async delete(movie){
+   async delete(movie) {
       console.log("Clica em Deletar Filme");
-      await this.page.getByRole('row', {name: movie.title}).getByRole('button').click();
+      await this.page.getByRole('row', { name: movie.title }).getByRole('button').click();
       await this.page.click('.confirm-removal');
    }
 }
