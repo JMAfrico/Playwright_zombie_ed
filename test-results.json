@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\JoaoCursos\\QAx\\project\\playwright.config.js",
-    "rootDir": "C:/JoaoCursos/QAx/project/tests",
+    "configFile": "c:\\JoaoCursos\\QAx\\project\\playwright.config.js",
+    "rootDir": "c:/JoaoCursos/QAx/project/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -30,7 +30,7 @@
         }
       ],
       [
-        "C:\\JoaoCursos\\QAx\\project\\node_modules\\playwright-tesults-reporter\\playwright-tesults-reporter.js",
+        "c:\\JoaoCursos\\QAx\\project\\node_modules\\playwright-tesults-reporter\\playwright-tesults-reporter.js",
         {
           "tesults-target": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjA5ZjVkZTIyLWVlN2EtNGVjNy1iZjg3LWNkMzVhOTRlZGRkNy0xNzE5Njc4MDA5MDA4IiwiZXhwIjo0MTAyNDQ0ODAwMDAwLCJ2ZXIiOiIwIiwic2VzIjoiYjhhMmI1MTItNzE5NC00MThlLTg5OTktYTljM2NiNTczMjEzIiwidHlwZSI6InQifQ.2UluZJ9MAsQ6gvMLroPvqWcpyB3vny_sJo_Sw_OTzJk"
         }
@@ -43,13 +43,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/JoaoCursos/QAx/project/test-results",
+        "outputDir": "c:/JoaoCursos/QAx/project/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/JoaoCursos/QAx/project/tests",
+        "testDir": "c:/JoaoCursos/QAx/project/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -60,18 +60,18 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.44.1",
-    "workers": 2,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "e2e\\login.spec.js",
-      "file": "e2e/login.spec.js",
+      "title": "e2e\\tvshow.spec.js",
+      "file": "e2e/tvshow.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "deve logar como adm",
+          "title": "Cadastrar nova série",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,14 +83,11 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 23,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 21248,
+                  "duration": 11866,
                   "errors": [],
                   "stdout": [
-                    {
-                      "text": "TAP version 13\n"
-                    },
                     {
                       "text": "Acessando a página de Login\n"
                     },
@@ -99,26 +96,25 @@
                     },
                     {
                       "text": "Verificando se está logado\n"
+                    },
+                    {
+                      "text": "Acessando Menu de Séries\n"
+                    },
+                    {
+                      "text": "Acessando Formulario de Séries\n"
+                    },
+                    {
+                      "text": "Digitando nome da série\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-17T01:55:27.874Z",
+                  "startTime": "2024-07-20T23:00:06.565Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-deve-logar-como-adm-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-deve-logar-como-adm-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\JoaoCursos\\QAx\\project\\test-results\\e2e-login-deve-logar-como-adm-chromium\\trace.zip"
+                      "path": "c:\\JoaoCursos\\QAx\\project\\test-results\\e2e-tvshow-Cadastrar-nova-série-chromium\\test-finished-1.png"
                     }
                   ]
                 }
@@ -126,9 +122,9 @@
               "status": "expected"
             }
           ],
-          "id": "ce46b734337c02890a88-3ddfc4a2907df90439bd",
-          "file": "e2e/login.spec.js",
-          "line": 5,
+          "id": "3be9a549a2932829307b-a11aaa39e40dcb5f1c5b",
+          "file": "e2e/tvshow.spec.js",
+          "line": 3,
           "column": 1
         }
       ]
@@ -136,8 +132,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-07-17T01:55:16.696Z",
-    "duration": 37115.523000000045,
+    "startTime": "2024-07-20T22:59:53.318Z",
+    "duration": 26499.320999999996,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

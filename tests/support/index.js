@@ -18,6 +18,7 @@ const { Toast, Alert , Popup} = require('./actions/Components');
 const { Api } = require('./api/index')
 const {MoviesApi} = require('./api/movies_api')
 const {LeadApi} = require('./api/lead_api')
+const {TvShow} = require('./actions/TvShow');
 
 /*Criação de instância (extensão) dos arquivos Page*/
 const test = base.extend({
@@ -29,6 +30,7 @@ const test = base.extend({
         context['toast'] = new Toast(page);
         context['alert'] = new Alert(page);
         context['popup'] = new Popup(page);
+        context['tvshow'] = new TvShow(page);
         await use(context);
     },
 

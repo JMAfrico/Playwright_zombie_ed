@@ -30,7 +30,7 @@ export class Login {
       eemail.screenshot({path: 'test-result/SoEmail.png'});
 
       await this.page.getByPlaceholder('E-mail').fill(email)
-            await this.page.screenshot({path: 'test-result/Email.png', fullpPge:true});
+      await this.page.screenshot({path: 'test-result/Email.png', fullpPge:true});
 
       await this.page.getByPlaceholder('Senha').fill(senha);
       await this.page.screenshot({path: 'test-result/Senha.png', fullPage:true});
@@ -57,7 +57,7 @@ export class Login {
       await expect(this.page).toHaveURL(/.*movies/);
       const logedUser = this.page.locator('.logged-user');
       await expect(logedUser).toContainText('Olá,');
-      
+
       await this.page.screenshot({path: 'test-result/Login sucesso.png', fullPage:true});
    }
 }
