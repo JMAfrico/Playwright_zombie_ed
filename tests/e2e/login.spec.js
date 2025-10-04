@@ -8,7 +8,7 @@ test('deve logar como adm', async ({ page }) => {
     await page.login.isLoggedIn();
   });
 
-  test('nao deve logar com senha errada', async ({ page }) => {
+  test('nao deve logar com senha errada @login', async ({ page }) => {
     await page.login.visit();
     await page.login.submit('admin@zombieplus.com','123123');
 
